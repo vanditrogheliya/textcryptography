@@ -1,0 +1,144 @@
+
+<html lang="en">
+
+<!-- Mirrored from iqonicthemes.com/themes/qwilo/register-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Dec 2018 07:01:27 GMT -->
+<head>
+<title>Text Cryptography</title>
+<link rel="shortcut icon" href="static/images/favicon.ico" />
+
+<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/mega-menu/mega_menu.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/animate.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/mediaelementplayer.min.css" rel="stylesheet" type="text/css" />
+
+<link href="static/revolution/css/settings.css" rel="stylesheet" type="text/css">
+
+<link href="static/revolution/css/revolution.addon.particles.css" rel="stylesheet" type="text/css">
+
+<link href="static/css/shortcodes.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/responsive.css" rel="stylesheet" type="text/css" />
+
+<link href="static/css/custom.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="#" data-style="styles">
+<link rel="stylesheet" href="static/css/style-customizer.css" />
+</head>
+<body>
+
+<div id="loading">
+<div id="loading-center">
+<img src="static/images/loader.png" alt="loder" >
+</div>
+</div>
+
+
+<div class="main-content">
+
+	<section class="iq-log-regi">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="heading-title text-center">
+						<h2 class="title iq-tw-6 iq-font-black">Text Cryptography</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-8">
+					<div class="iq-login iq-brd iq-pt-40 iq-pb-30 iq-plr-30">
+						<form class="login-form" action="http://127.0.0.1:5000/cryptography" method="POST">
+			          		<div class="form-group">
+					            <label class="control-label">Algorithm</label>
+					            <select  id="algo" class="form-control" name="algorithm" required>
+					            	<option value="-1">Select Algorithm</option>
+					            	<option value="0">AES (Advanced Encryption Standard) </option>
+					            	<option value="1">DES (Data Encryption Standard) </option>
+					            	<option value="2">Caesar Cipher </option>
+			          			</select>
+			          		</div>
+
+			          		<div class="form-group" id="plainText" style="display: none;" >
+			            		<label class="control-label">Plain text</label>
+			           			<input class="form-control" id="pt"type="text" name="plainText" placeholder="Enter plain text here..." autofocus required>
+			          		</div>
+			          		<!-- key for AES -->
+			          		<div class="form-group"  id="key" 	style="display: none;">
+			            		<label class="control-label">Key</label>
+			             		<input class="form-control" id="aeskey" type="text" name="key" placeholder="enter key for AES here..." >
+			          		</div>
+			          		<!-- key for DES -->
+			          		<div class="form-group"  id="key1" style="display: none;"> 
+			            		<label class="control-label">Key</label>
+			             		<input class="form-control" id="deskey" type="text" name="key1" placeholder="Please enter key of exact 8 byte..." minlength="8" maxlength="8">
+			          		</div>
+			          		<div class="form-group"  id="button"> 
+			          			<input type = "submit" value = "submit" />
+			          		</div>
+			        	</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#algo").change(function () {
+            if ($(this).val() == "0") {
+                $("#plainText").show();
+                $("#key").show();
+                $("#aeskey").attr('required', '');   
+                $("#key1").hide();                
+            } 
+            else if ($(this).val() == "1") {
+                $("#plainText").show();
+                $("#key").hide();
+                $("#key1").show();
+                $("#pt").attr('placeholder', 'Please enter input of multiple of 8 byte');  
+                $("#deskey").attr('required', '');  
+            } 
+            else if ($(this).val() == "2") {
+                $("#plainText").show();
+                $("#key").hide();
+                $("#key1").hide();                
+            } 
+            else{
+                $("#plainText").hide();
+                $("#key").hide();
+                $("#key1").hide();                
+            } 
+
+        });
+    });
+
+
+</script>
+
+<script src="static/js/main.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/mega-menu/mega_menu.js"></script>
+
+
+<script src="static/js/style-customizer.js"></script>
+
+<script src="static/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from iqonicthemes.com/themes/qwilo/register-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Dec 2018 07:01:27 GMT -->
+</html>
